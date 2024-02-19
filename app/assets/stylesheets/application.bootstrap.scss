@@ -1,0 +1,45 @@
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons';
+
+body {
+  background: rgb(21, 122, 172);
+  background: linear-gradient(90deg, rgba(21, 122, 172, 1) 23%, rgba(167, 212, 233, 1) 100%);
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-size: 14px;
+  color: #fff;
+  background-color: #fff;
+  line-height: 1.7em;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+}
+
+/* Center content horizontally */
+.main-content {
+  width: 100%;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px; /* Adjust max-width as needed */
+}
+
+.jobs-btn{
+  color: #006cb1!important;
+  border-color: transparent;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: 700!important;
+  text-transform: uppercase!important;
+  background-image: linear-gradient(90deg,#fff 0,#cde1ff 100%);
+}
+
+.job-card {
+  color: #006cb1!important;
+  font-size: 14px;
+  background-image: linear-gradient(90deg,#fff 0,#cde1ff 100%);
+}

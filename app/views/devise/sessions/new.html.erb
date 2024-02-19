@@ -1,0 +1,32 @@
+<h2 class="text-xl font-bold mb-4">Welcome!!</h2>
+
+<div class="text-xl font-bold mb-4">
+  <div>Please use the following credentials for logging in:</div>
+  <div>Email: ashwin@test.com</div>
+  <div>Password: 123456789</div>
+</div>
+
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "w-full max-w-xs" }) do |f| %>
+  <div class="mb-4">
+    <div>
+      <%= f.label :email, class: "block text-gray-700 text-sm font-bold mb-2" %>
+    </div>
+    <div>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+    </div>
+  </div>
+
+  <div class="mb-4">
+    <div>
+      <%= f.label :password, class: "block text-gray-700 text-sm font-bold mb-2" %>
+    </div>
+    <div>
+      <%= f.password_field :password, autocomplete: "current-password", class: "appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+    </div>
+  </div>
+
+  <div class="mb-6">
+    <%= f.submit "Log in", class: "btn jobs-btn" %>
+  </div>
+<% end %>

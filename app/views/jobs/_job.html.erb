@@ -1,0 +1,15 @@
+<div class="row">
+  <% invitation = current_user.invitations.exists?(job_id: job.id) %>
+  <div style="margin-bottom: 20px;">
+  <h1><%= job.title %></h1>
+</div>
+  <p><%= job.description %></p>
+
+  <div class="col-sm-3 text-sm-right align-self-center" >
+    <%= link_to invitations_path(invitation: { job_id: job.id }),
+          class: "btn jobs-btn #{'disabled' if invitation }",
+          data: { turbo_stream: "true", turbo_method: "post" } do %>
+      <%= invitation ? "Quote Requested" : "Request a Quote" %>
+    <% end %>
+  </div>
+</div>

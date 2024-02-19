@@ -1,0 +1,6 @@
+<%= turbo_stream.update @invitation.job,
+    partial: "jobs/job",
+    locals: { job: @invitation.job }
+%>
+
+<%= render partial: "shared/notifications", locals: { message: "Invitation sent successfully!! " } %>
